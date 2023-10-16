@@ -8,7 +8,7 @@
 				  <!-- logo for regular state and mobile devices -->
 					 <div class="d-flex align-items-center justify-content-center">					 	
 						  <img src="../images/logo-dark.png" alt="">
-						  <h3><b>ADMIN</b>RSI Fatimah</h3>
+						  <h3><b>ADMIN</b>RSI FATIMAH</h3>
 					 </div>
 				</a>
 			</div>
