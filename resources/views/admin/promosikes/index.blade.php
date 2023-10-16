@@ -26,9 +26,11 @@
 						<thead>
 							<tr>
 								<th>No</th>
+							
 								<th>Gambar</th>
+			
+								<th>Action</th>
 						
-									
 							</tr>
 						</thead>
 						<tbody>

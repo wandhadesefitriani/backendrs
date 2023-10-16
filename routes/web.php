@@ -9,6 +9,16 @@ use App\Http\Controllers\Backend\layananlaboratorium;
 use App\Http\Controllers\Backend\EswlController;
 use App\Http\Controllers\Backend\LayananlaboratoriumController;
 use App\Http\Controllers\Backend\PromosikesController;
+use App\Http\Controller\Backend\Informasikes;
+use App\Http\Controller\Backend\Artikelkes;
+use App\Http\Controller\Backend\berita;
+use App\Http\Controller\Backend\kegiatankami;
+use App\Http\Controller\Backend\jadwalDokter;
+use App\Http\Controller\Backend\layananunggulan;
+use App\Http\Controller\Backend\layananlainnya;
+use App\Http\Controller\Backend\rawatinap;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -90,4 +100,76 @@ Route::prefix('promosikes')->group(function () {
     Route::get('/edit/{id}', [PromosikesController::class, 'edit'])->name('promosikes.edit');
     Route::post('/update/{id}', [PromosikesController::class, 'update'])->name('promosikes.update');
     Route::get('/delete/{id}', [PromosikesController::class, 'delete'])->name('promosikes.delete');
+});
+
+Route::prefix('informasikes')->group(function () {
+    Route::get('/view', [informasikesController::class, 'index'])->name('informasikes.view');
+    Route::get('/add', [informasikesController::class, 'add'])->name('informasikes.add');
+    Route::post('/store', [informasikesController::class, 'store'])->name('informasikes.store');
+    Route::get('/edit/{id}', [informasikesController::class, 'edit'])->name('informasikes.edit');
+    Route::post('/update/{id}', [informasikesController::class, 'update'])->name('informasikes.update');
+    Route::get('/delete/{id}', [informasikesController::class, 'delete'])->name('informasikes.delete');
+});
+
+Route::prefix('artikelkes')->group(function () {
+    Route::get('/view', [artikelkesController::class, 'index'])->name('artikelkes.view');
+    Route::get('/add', [artikelkesController::class, 'add'])->name('artikelkes.add');
+    Route::post('/store', [artikelkesController::class, 'store'])->name('artikelkes.store');
+    Route::get('/edit/{id}', [artikelkesController::class, 'edit'])->name('artikelkes.edit');
+    Route::post('/update/{id}', [artikelkesController::class, 'update'])->name('artikelkes.update');
+    Route::get('/delete/{id}', [artikelkesController::class, 'delete'])->name('artikelkes.delete');
+});
+
+Route::prefix('berita')->group(function () {
+    Route::get('/view', [beritaController::class, 'index'])->name('berita.view');
+    Route::get('/add', [beritaController::class, 'add'])->name('berita.add');
+    Route::post('/store', [beritaController::class, 'store'])->name('berita.store');
+    Route::get('/edit/{id}', [beritaController::class, 'edit'])->name('berita.edit');
+    Route::post('/update/{id}', [beritaController::class, 'update'])->name('berita.update');
+    Route::get('/delete/{id}', [beritaController::class, 'delete'])->name('berita.delete');
+});
+
+Route::prefix('kegiatankami')->group(function () {
+    Route::get('/view', [kegiatankamiController::class, 'index'])->name('kegiatankami.view');
+    Route::get('/add', [kegiatankamiController::class, 'add'])->name('kegiatankami.add');
+    Route::post('/store', [kegiatankamiController::class, 'store'])->name('kegiatankami.store');
+    Route::get('/edit/{id}', [kegiatankamiController::class, 'edit'])->name('kegiatankami.edit');
+    Route::post('/update/{id}', [kegiatankamiController::class, 'update'])->name('kegiatankami.update');
+    Route::get('/delete/{id}', [kegiatankamiController::class, 'delete'])->name('kegiatankami.delete');
+});
+
+Route::prefix('jadwalDokter')->group(function () {
+    Route::get('/view', [jadwalDokterController::class, 'index'])->name('jadwalDokter.view');
+    Route::get('/add', [jadwalDokterController::class, 'add'])->name('jadwalDokter.add');
+    Route::post('/store', [jadwalDokterController::class, 'store'])->name('jadwalDokter.store');
+    Route::get('/edit/{id}', [jadwalDokterController::class, 'edit'])->name('jadwalDokter.edit');
+    Route::post('/update/{id}', [jadwalDokterController::class, 'update'])->name('jadwalDokter.update');
+    Route::get('/delete/{id}', [jadwalDokterController::class, 'delete'])->name('jadwalDokter.delete');
+});
+
+Route::prefix('layananunggulan')->group(function () {
+    Route::get('/view', [layananunggulanController::class, 'index'])->name('layananunggulan.view');
+    Route::get('/add', [layananunggulanController::class, 'add'])->name('layananunggulan.add');
+    Route::post('/store', [layananunggulanController::class, 'store'])->name('layananunggulan.store');
+    Route::get('/edit/{id}', [layananunggulanController::class, 'edit'])->name('layananunggulan.edit');
+    Route::post('/update/{id}', [layananunggulanController::class, 'update'])->name('layananunggulan.update');
+    Route::get('/delete/{id}', [layananunggulanController::class, 'delete'])->name('layananunggulan.delete');
+});
+
+Route::prefix('layananlainnya')->group(function () {
+    Route::get('/view', [layananlainnyaController::class, 'index'])->name('layananlainnya.view');
+    Route::get('/add', [layananlainnyaController::class, 'add'])->name('layananlainnya.add');
+    Route::post('/store', [layananlainnyaController::class, 'store'])->name('layananlainnya.store');
+    Route::get('/edit/{id}', [layananlainnyaController::class, 'edit'])->name('layananlainnya.edit');
+    Route::post('/update/{id}', [layananlainnyaController::class, 'update'])->name('layananlainnya.update');
+    Route::get('/delete/{id}', [layananlainnyaController::class, 'delete'])->name('layananlainnya.delete');
+});
+
+Route::prefix('rawatinap')->group(function () {
+    Route::get('/view', [rawatinapController::class, 'index'])->name('rawatinap.view');
+    Route::get('/add', [rawatinapController::class, 'add'])->name('rawatinap.add');
+    Route::post('/store', [rawatinapController::class, 'store'])->name('rawatinap.store');
+    Route::get('/edit/{id}', [rawatinapController::class, 'edit'])->name('rawatinap.edit');
+    Route::post('/update/{id}', [rawatinapController::class, 'update'])->name('rawatinap.update');
+    Route::get('/delete/{id}', [rawatinapController::class, 'delete'])->name('rawatinap.delete');
 });

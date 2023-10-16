@@ -32,7 +32,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Jadwal Dokter</a></li>
+            <li><a href="{{route('jadwalDokter.view')}}"><i class="ti-more"></i>Jadwal Dokter</a></li>
           </ul>
         </li>
 
@@ -45,8 +45,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Layanan unggulan</a></li>
-            <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Layanan lainnya</a></li>
+            <li><a href="{{route('layananunggulan.view')}}"><i class="ti-more"></i>Layanan unggulan</a></li>
+            <li><a href="{{route('layananlainnya.view')}}"><i class="ti-more"></i>Layanan lainnya</a></li>
           </ul>
         </li> 
 		
@@ -59,7 +59,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Rawat Inap</a></li>
+            <li><a href="{{route('rawatinap.view')}}"><i class="ti-more"></i>Rawat Inap</a></li>
           </ul>
         </li> 
         
@@ -99,42 +99,19 @@
         <li class="treeview">
           <a href="#">
             <i data-feather="grid"></i>
-            <span>Berita</span>
+            <span>Informasi Kesehatan</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Berita</a></li>
+            <li><a href="{{route('informasikes.view')}}"><i class="ti-more"></i>Informasi Kesehatan</a></li>
+            <li><a href="{{route('artikelkes.view')}}"><i class="ti-more"></i>Artikel Kesehatan</a></li>
+            <li><a href="{{route('berita.view')}}"><i class="ti-more"></i>Berita</a></li>
+            <li><a href="{{route('kegiatankami.view')}}"><i class="ti-more"></i>Kegiatan Kami</a></li>
           </ul>
         </li>
-		
-		<li class="treeview">
-          <a href="#">
-            <i data-feather="credit-card"></i>
-            <span>Artikel</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-			<li><a href="{{route('user.view')}}"><i class="ti-more"></i>Artikel</a></li>
-		  </ul>
-        </li>  
-		  
-        <li class="treeview">
-          <a href="#">
-            <i data-feather="hard-drive"></i>
-            <span>Kegiatan kami</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-right pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Kegiatan kami</a></li>>
-          </ul>
-        </li>
-        
+		     
 		<li>
           <a href="auth_login.html">
             <i data-feather="lock"></i>

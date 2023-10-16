@@ -16,8 +16,8 @@
 
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">Table Jadwal Dokter</h3>
-                  <a href="{{route('jadwalDokter.add')}}" style="float:right;" type="button" class="btn btn-rounded btn-info mb-5">Tambah</a>
+				  <h3 class="box-title">Table Berita</h3>
+                  <a href="{{route('berita.add')}}" style="float:right;" type="button" class="btn btn-rounded btn-info mb-5">Tambah</a>
 				</div>
 				<!-- /.box-header -->
 				<div class="box-body">
@@ -25,30 +25,29 @@
 					  <table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th>Nama</th>
-								<th>Hari</th>
-								<th>Jam</th>
+								<th>No</th>
+							
 								<th>Gambar</th>
-                                <th>Action</th>
-								
-								
+			
+								<th>Action</th>
+						
 							</tr>
 						</thead>
 						<tbody>
-						@foreach($jadwalDokter as $data)	
+						@foreach($berita as $data)	
 							<tr>
-								<td>{{$loop -> iteration}}</td>
+								<td>{{$loop ->iteration}}</td>
 								<td>{{$data->judul}}</td>
 								<td>
-                                 <img src="{{ asset('storage/jadwalDokter/gambar/' .$data->gambar) }}" width="180px" alt="Image">
+                                 <img src="{{ asset('storage/berita/gambar/' .$data->gambar) }}" width="180px" alt="Image">
                                  </td>
 
 
                                 <td>{{$data->deskripsi}}</td>
 								
 								<td>
-									<a href="{{ route('jadwalDokter.edit', $data->id) }}" class="btn btn-info">Edit</a>
-									<a href="{{ route('jadwalDokter.delete', $data->id) }}" id="delete" class="btn btn-danger">Delate</a>
+									<a href="{{ route('berita.edit', $data->id) }}" class="btn btn-info">Edit</a>
+									<a href="{{ route('berita.delete', $data->id) }}" id="delete" class="btn btn-danger">Delate</a>
                                 </td>
 	
 							</tr>
