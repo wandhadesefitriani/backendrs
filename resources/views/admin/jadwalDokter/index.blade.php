@@ -35,10 +35,12 @@
 							</tr>
 						</thead>
 						<tbody>
-						@foreach($jadwalDokter as $data)	
+						@foreach($jadwaldokter as $data)	
 							<tr>
 								<td>{{$loop -> iteration}}</td>
-								<td>{{$data->judul}}</td>
+								<td>{{$data->nama}}</td>
+								<td>{{$data->hari}}</td>
+								<td>{{$data->jam}}</td>
 								<td>
                                  <img src="{{ asset('storage/jadwalDokter/gambar/' .$data->gambar) }}" width="180px" alt="Image">
                                  </td>

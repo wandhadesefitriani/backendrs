@@ -12,7 +12,7 @@ class artikelkesController extends Controller
 {
     public function index()
     {
-        $artikelkes= Artikelkes::all();
+        $artikelkes= artikelkes::all();
         return view('admin.artikelkes.index', compact('artikelkes'));
     }
 
@@ -23,8 +23,10 @@ class artikelkesController extends Controller
     public function store(Request $request)
     {
         $rules = [
+            'judul' => 'required',
             'gambar' => 'required|max:1000|mimes:jpg,jpeg,png',
-
+            'deskripsi' => 'required',
+            'author' => 'required',
         ];
 
         $messages = [
@@ -41,7 +43,10 @@ class artikelkesController extends Controller
 
 
         $artikelkes= new artikelkes();
+        $artikelkes->judul=$request->judul;
         $artikelkes->gambar = $fileName;
+        $artikelkes->deskripsi=$request->deskripsi;
+        $artikelkes->author=$request->author;
         $artikelkes->save();
         return redirect()->route('artikelkes.view')->with('success', 'Tambah data berhasil');
     }
@@ -96,9 +101,9 @@ class artikelkesController extends Controller
         }
 
 
-        // Hapus data berita
+        // Hapus data artikelkes
         $artikelkes->delete();
 
-        return redirect()->route('artikelkes.view')->with('success', 'Data berita berhasil dihapus');
+        return redirect()->route('artikelkes.view')->with('success', 'Data artikelkes berhasil dihapus');
     }
 }

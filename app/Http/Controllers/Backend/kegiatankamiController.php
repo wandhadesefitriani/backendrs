@@ -42,7 +42,10 @@ class kegiatankamiController extends Controller
 
 
         $kegiatankami= new kegiatankami();
+        $kegiatankami->judul=$request->judul;
         $kegiatankami->gambar = $fileName;
+        $kegiatankami->deskripsi=$request->deskripsi;
+        $kegiatankami->author=$request->author;
         $kegiatankami->save();
         return redirect()->route('kegiatankami.view')->with('success', 'Tambah data berhasil');
     }
@@ -89,7 +92,7 @@ class kegiatankamiController extends Controller
 
     public function delete(Request $request, $id)
     {
-        $kegiatankami = informasikes::findOrFail($id);
+        $kegiatankami = $kegiatankami::findOrFail($id);
 
         // Hapus gambar utama
         if ($kegiatankami->gambar) {

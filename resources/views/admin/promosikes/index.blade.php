@@ -26,7 +26,7 @@
 						<thead>
 							<tr>
 								<th>No</th>
-							
+							     <th>Nama</th>
 								<th>Gambar</th>
 			
 								<th>Action</th>
@@ -37,7 +37,7 @@
 						@foreach($promosikes as $data)	
 							<tr>
 								<td>{{$loop ->iteration}}</td>
-								<td>{{$data->judul}}</td>
+								<td>{{$data->nama}}</td>
 								<td>
                                  <img src="{{ asset('storage/promosikes/gambar/' .$data->gambar) }}" width="180px" alt="Image">
                                  </td>

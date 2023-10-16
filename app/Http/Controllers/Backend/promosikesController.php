@@ -23,6 +23,7 @@ class PromosikesController extends Controller
     {
         $rules = [
             'gambar' => 'required|max:1000|mimes:jpg,jpeg,png',
+            'nama' => 'required',
 
         ];
 
@@ -40,6 +41,7 @@ class PromosikesController extends Controller
 
 
         $promosikes = new promosikes();
+        $promosikes->nama=$request->nama;
         $promosikes->gambar = $fileName;
         $promosikes->save();
         return redirect()->route('promosikes.view')->with('success', 'Tambah data berhasil');

@@ -43,8 +43,8 @@
                        
 							<div class="form-group">
 								<h5>Judul <span class="text-danger">*</span></h5>
-									<input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul">
-                                    @error('judul')
+									<input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama">
+                                    @error('nama')
                                    <div class="invalid-feedback">
                                    {{$message}}
                                    </div>
@@ -62,10 +62,7 @@
                                    @enderror
                                     </div>	
 							
-                            <div class="form-group">
-								<h5>Deskripsi <span class="text-danger">*</span></h5>
-                                <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="3"></textarea>
-							</div>    
+                            
 							
                         <!-- END row select -->  
 						<div class="text-xs-right">

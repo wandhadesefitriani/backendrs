@@ -24,7 +24,7 @@ class mcuController extends Controller
         $rules=[
              'judul' => 'required',
              'gambar' => 'required|max:1000|mimes:jpg,jpeg,png',
-             'deskripsi' => 'required|min:20',
+             'deskripsi' => 'required',
             ];
 
               $messages =[

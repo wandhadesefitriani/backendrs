@@ -25,10 +25,11 @@
 					  <table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th>No</th>
-							
+							    <th>No</th>
+								<th>Judul</th>
 								<th>Gambar</th>
-			
+								<th>Deskripsi</th>
+								<th>author</th>
 								<th>Action</th>
 						
 							</tr>
@@ -41,9 +42,9 @@
 								<td>
                                  <img src="{{ asset('storage/artikelkes/gambar/' .$data->gambar) }}" width="180px" alt="Image">
                                  </td>
+								 <td>{{$data->deskripsi}}</td>
+								<td>{{$data->author}}</td>
 
-
-                                <td>{{$data->deskripsi}}</td>
 								
 								<td>
 									<a href="{{ route('artikelkes.edit', $data->id) }}" class="btn btn-info">Edit</a>

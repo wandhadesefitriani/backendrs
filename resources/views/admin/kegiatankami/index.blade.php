@@ -25,25 +25,27 @@
 					  <table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th>No</th>
-							
+							<th>No</th>
+								<th>Judul</th>
 								<th>Gambar</th>
-			
+								<th>Deskripsi</th>
+								<th>author</th>
 								<th>Action</th>
-						
 							</tr>
 						</thead>
 						<tbody>
 						@foreach($kegiatankami as $data)	
 							<tr>
-								<td>{{$loop ->iteration}}</td>
+							<td>{{$loop ->iteration}}</td>
 								<td>{{$data->judul}}</td>
 								<td>
                                  <img src="{{ asset('storage/kegiatankami/gambar/' .$data->gambar) }}" width="180px" alt="Image">
                                  </td>
+								 <td>{{$data->deskripsi}}</td>
+								<td>{{$data->author}}</td>
 
 
-                                <td>{{$data->deskripsi}}</td>
+                              
 								
 								<td>
 									<a href="{{ route('kegiatankami.edit', $data->id) }}" class="btn btn-info">Edit</a>

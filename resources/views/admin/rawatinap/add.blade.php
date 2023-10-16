@@ -42,7 +42,7 @@
 						<div class="col-12">	
                        
 							<div class="form-group">
-								<h5>Judul <span class="text-danger">*</span></h5>
+								<h5>Nama Ruang <span class="text-danger">*</span></h5>
 									<input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul">
                                     @error('judul')
                                    <div class="invalid-feedback">

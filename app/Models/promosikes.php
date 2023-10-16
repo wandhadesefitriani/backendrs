@@ -10,6 +10,7 @@ class Promosikes extends Model
     use HasFactory;
     protected $table = 'promosikes';
     protected $fillable = [
+        'nama',
         'gambar',
     ];
 }

@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('kegiatankamis', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
             $table->string('gambar');
+            $table->string('deskripsi');
+            $table->string('author');
             $table->timestamps();
         });
     }

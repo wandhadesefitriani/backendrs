@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\berita;
+use App\Models\Berita;
 use illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
@@ -12,7 +12,7 @@ class beritaController extends Controller
 {
     public function index()
     {
-        $berita= berita::all();
+        $berita= Berita::all();
         return view('admin.berita.index', compact('berita'));
     }
 
@@ -23,7 +23,10 @@ class beritaController extends Controller
     public function store(Request $request)
     {
         $rules = [
+            'judul' => 'required',
             'gambar' => 'required|max:1000|mimes:jpg,jpeg,png',
+            'deskripsi' => 'required',
+            'author' => 'required',
 
         ];
 
@@ -39,20 +42,22 @@ class beritaController extends Controller
         $fileName = time() . '.' . $request->gambar->extension();
         $request->file('gambar')->storeAs('public/berita/gambar', $fileName);
 
-
-        $berita= new berita();
+        $berita = new Berita();
+        $berita->judul=$request->judul;
         $berita->gambar = $fileName;
+        $berita->deskripsi=$request->deskripsi;
+        $berita->author=$request->author;
         $berita->save();
         return redirect()->route('berita.view')->with('success', 'Tambah data berhasil');
     }
     public function edit(Request $request, $id)
     {
-        $editData = berita::findOrFail($id);
+        $editData = Berita::findOrFail($id);
         return view('admin.berita.edit', compact('editData'));
     }
     public function update(Request $request, $id)
     {
-        $editData = berita::find($id);
+        $editData = Berita::find($id);
         if ($request->hasFile('gambar')) {
             $fileCheck = 'nullable|max:1000|mimes:jpg,jpeg,png';
         } else {
@@ -88,7 +93,7 @@ class beritaController extends Controller
 
     public function delete(Request $request, $id)
     {
-        $berita = berita::findOrFail($id);
+        $berita = Berita::findOrFail($id);
 
         // Hapus gambar utama
         if ($berita->gambar) {

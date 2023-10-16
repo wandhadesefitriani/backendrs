@@ -26,7 +26,7 @@
 						<thead>
 							<tr>
 								<th>No</th>
-								<th>Judul</th>
+								<th>Nama Ruangan</th>
 								<th>Gambar</th>
 								<th>Deskripsi</th>
                                 <th>Action</th>

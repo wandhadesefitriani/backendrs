@@ -16,14 +16,16 @@
       
       <!-- sidebar menu-->
       <ul class="sidebar-menu" data-widget="tree">  
-		  
-		<li>
-          <a href="{{route('user.view')}}">
-            <i data-feather="pie-chart"></i>
+
+      
+		  <li>
+          <a href="auth_login.html">
+            <i data-feather="home"></i>
 			<span>Dashboard</span>
           </a>
-        </li>  
-		
+        </li> 
+        
+
         <li class="treeview">
           <a href="#">
             <i data-feather="mail"></i> <span>Jadwal Dokter</span>
@@ -121,13 +123,5 @@
         
       </ul>
     </section>
-	
-	<div class="sidebar-footer">
-		<!-- item-->
-		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings" aria-describedby="tooltip92529"><i class="ti-settings"></i></a>
-		<!-- item-->
-		<a href="mailbox_inbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i class="ti-email"></i></a>
-		<!-- item-->
-		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i class="ti-lock"></i></a>
-	</div>
+
   </aside>

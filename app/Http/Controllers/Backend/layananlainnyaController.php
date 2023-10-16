@@ -12,7 +12,7 @@ class layananlainnyaController extends Controller
 {
     public function index (){
         $layananlainnya = layananlainnya::all();
-        return view('admin.layananlainnya.index', compact('eswl'));
+        return view('admin.layananlainnya.index', compact('layananlainnya'));
 
     }
 
@@ -24,7 +24,7 @@ class layananlainnyaController extends Controller
         $rules=[
              'judul' => 'required',
              'gambar' => 'required|max:1000|mimes:jpg,jpeg,png',
-             'deskripsi' => 'required|min:20',
+             'deskripsi' => 'required',
             ];
 
               $messages =[
@@ -51,7 +51,7 @@ class layananlainnyaController extends Controller
 
     public function edit(Request $request, $id)
      {
-        $editData = Eswl::findOrFail($id);
+        $editData = layananlainnya::findOrFail($id);
         return view('admin.layananlainnya.edit', compact('editData'));
     }
     public function update(Request $request, $id)

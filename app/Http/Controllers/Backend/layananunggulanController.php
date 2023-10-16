@@ -12,7 +12,7 @@ class layananunggulanController extends Controller
 {
     public function index (){
         $layananunggulan = layananunggulan::all();
-        return view('admin.layananunggulan.index', compact('eswl'));
+        return view('admin.layananunggulan.index', compact('layananunggulan'));
 
     }
 
@@ -24,7 +24,7 @@ class layananunggulanController extends Controller
         $rules=[
              'judul' => 'required',
              'gambar' => 'required|max:1000|mimes:jpg,jpeg,png',
-             'deskripsi' => 'required|min:20',
+             'deskripsi' => 'required',
             ];
 
               $messages =[
@@ -51,7 +51,7 @@ class layananunggulanController extends Controller
 
     public function edit(Request $request, $id)
      {
-        $editData = Eswl::findOrFail($id);
+        $editData = layananunggulan::findOrFail($id);
         return view('admin.layananunggulan.edit', compact('editData'));
     }
     public function update(Request $request, $id)

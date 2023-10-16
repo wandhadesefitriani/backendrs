@@ -10,6 +10,9 @@ class artikelkes extends Model
     use HasFactory;
     protected $table = 'artikelkes';
     protected $fillable = [
+        'judul',
         'gambar',
+        'deskripsi',
+        'author',
     ];
 }

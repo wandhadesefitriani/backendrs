@@ -8,11 +8,12 @@ use App\Models\jadwalDokter;
 use illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
+
 class JadwalDokterController extends Controller
 {
     public function index (){
         $jadwaldokter = jadwalDokter::all();
-        return view('admin.jadwalDokter.index', compact('mcu'));
+        return view('admin.jadwaldokter.index', compact('jadwaldokter'));
 
     }
 

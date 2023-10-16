@@ -16,7 +16,7 @@
 
 			 <div class="box">
 				<div class="box-header with-border">
-				  <h3 class="box-title">Table Layanan Lainnya/h3>
+				  <h3 class="box-title">Table Layanan Lainnya</h3>
                   <a href="{{route('layananlainnya.add')}}" style="float:right;" type="button" class="btn btn-rounded btn-info mb-5">Tambah</a>
 				</div>
 				<!-- /.box-header -->

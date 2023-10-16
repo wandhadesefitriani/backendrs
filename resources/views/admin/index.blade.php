@@ -15,89 +15,82 @@
             </div>
         </header>
 
-		 <!-- Section-->
-		 <section class="py-5">
-            <div class="container px-5 px-lg-5 mt-5">
-                <div class="row gx-5 gx-lg-5 row-cols-5 row-cols-md-5 row-cols-xl-5 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->       
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                           
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    
-                                    <html lang="en">
-                                    <head>
-                                    <meta charset="UTF-8">
-                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                </html>
-                                    </div>
-                            </div>
 
-						  <!-- Product actions-->
-						  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                           
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
-                                    <!-- Product price-->
-                                   
-                                </div>
-                            </div>
-                            <!-- Product actions-->								
-									</thead>
-									<tbody>
-										<tr>										
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>  
-				</div>
-			</div>
-		</section>
-		<!-- /.content -->
+        <section class="section">
+  <div class="section-header">
+  
+  </div>
+  <div class="column">
+    <div class="row">
+      <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+        <div class="">
+          <div class="card-icon bg-primary">
+            <i class="far fa-user"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Jadwal Dokter</h4>
+            </div>
+            <div class="card-body">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+        <div class="">
+          <div class="card-icon bg-danger">
+            <i class="far fa-user"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Layanan</h4>
+            </div>
+            <div class="card-body">
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+        <div class="">
+          <div class="card-icon bg-warning">
+            <i class="far fa-file"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Rawat Inap</h4>
+            </div>
+            <div class="card-body">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 col-sm-6 col-12">
+        <div class="">
+          <div class="card-icon bg-success">
+            <i class="far fa-file"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Promosi Kesehatan</h4>
+            </div>
+            <div class="card-body">
+   
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        
 	  </div>
   </div>
   <!-- /.content-wrapper -->

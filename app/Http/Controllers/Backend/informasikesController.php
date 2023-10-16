@@ -22,7 +22,10 @@ class informasikesController extends Controller
     public function store(Request $request)
     {
         $rules = [
+            'judul' => 'required',
             'gambar' => 'required|max:1000|mimes:jpg,jpeg,png',
+            'deskripsi' => 'required',
+            'author' => 'required',
 
         ];
 
@@ -40,7 +43,11 @@ class informasikesController extends Controller
 
 
         $informasikes= new informasikes();
+        $informasikes->judul=$request->judul;
         $informasikes->gambar = $fileName;
+        $informasikes->deskripsi=$request->deskripsi;
+        $informasikes->author=$request->author;
+        
         $informasikes->save();
         return redirect()->route('informasikes.view')->with('success', 'Tambah data berhasil');
     }

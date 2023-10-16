@@ -26,9 +26,10 @@
 						<thead>
 							<tr>
 								<th>No</th>
-							
+								<th>Judul</th>
 								<th>Gambar</th>
-			
+								<th>Deskripsi</th>
+								<th>author</th>
 								<th>Action</th>
 						
 							</tr>
@@ -41,9 +42,8 @@
 								<td>
                                  <img src="{{ asset('storage/informasikes/gambar/' .$data->gambar) }}" width="180px" alt="Image">
                                  </td>
-
-
                                 <td>{{$data->deskripsi}}</td>
+								<td>{{$data->author}}</td>
 								
 								<td>
 									<a href="{{ route('informasikes.edit', $data->id) }}" class="btn btn-info">Edit</a>

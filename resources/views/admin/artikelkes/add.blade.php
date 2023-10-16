@@ -41,7 +41,7 @@
 					  <div class="row">
 						<div class="col-12">	
                        
-							<div class="form-group">
+						<div class="form-group">
 								<h5>Judul <span class="text-danger">*</span></h5>
 									<input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul">
                                     @error('judul')
@@ -65,7 +65,17 @@
                             <div class="form-group">
 								<h5>Deskripsi <span class="text-danger">*</span></h5>
                                 <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="3"></textarea>
-							</div>    
+							</div>  
+							
+							<div class="form-group">
+								<h5>Author <span class="text-danger">*</span></h5>
+									<input type="text" class="form-control @error('author') is-invalid @enderror" name="author">
+                                    @error('author')
+                                   <div class="invalid-feedback">
+                                   {{$message}}
+                                   </div>
+                                   @enderror
+                                    </div>  
 							
                         <!-- END row select -->  
 						<div class="text-xs-right">

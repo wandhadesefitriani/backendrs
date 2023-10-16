@@ -9,14 +9,40 @@ use App\Http\Controllers\Backend\layananlaboratorium;
 use App\Http\Controllers\Backend\EswlController;
 use App\Http\Controllers\Backend\LayananlaboratoriumController;
 use App\Http\Controllers\Backend\PromosikesController;
-use App\Http\Controller\Backend\Informasikes;
-use App\Http\Controller\Backend\Artikelkes;
-use App\Http\Controller\Backend\berita;
-use App\Http\Controller\Backend\kegiatankami;
-use App\Http\Controller\Backend\jadwalDokter;
-use App\Http\Controller\Backend\layananunggulan;
-use App\Http\Controller\Backend\layananlainnya;
-use App\Http\Controller\Backend\rawatinap;
+use App\Http\Controllers\Backend\InformasikesController;
+use App\Http\Controllers\Backend\ArtikelkesController;
+use App\Http\Controllers\Backend\beritaController;
+use App\Http\Controllers\Backend\kegiatankamiController;
+use App\Http\Controllers\Backend\jadwalDokterController;
+use App\Http\Controllers\Backend\layananunggulanController;
+use App\Http\Controllers\Backend\layananlainnyaController;
+use App\Http\Controllers\Backend\rawatinapController;
+
+
+use App\Http\Controllers\jadwalDokterFController;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\layananController;
+use App\Http\Controllers\ranapController;
+use App\Http\Controllers\mcuFController;
+use App\Http\Controllers\paketController;
+use App\Http\Controllers\labFController;
+use App\Http\Controllers\eswlFController;
+use App\Http\Controllers\profilFController;
+use App\Http\Controllers\artikelkesehatanFController;
+use App\Http\Controllers\artikel1FController;
+use App\Http\Controllers\beritainformasiFController;
+use App\Http\Controllers\kegiatanController;
+use App\Http\Controllers\kegiatan1FController;
+use App\Http\Controllers\kegiatan2FController;
+use App\Http\Controllers\kegiatan3FController;
+use App\Http\Controllers\kegiatan4FController;
+use App\Http\Controllers\mitraController;
+use App\Http\Controllers\dokumenkepkController;
+use App\Http\Controllers\igdController;
+use App\Http\Controllers\artikel2FController;
+use App\Http\Controllers\artikel3FController;
+
+
 
 
 
@@ -37,8 +63,32 @@ use App\Http\Controller\Backend\rawatinap;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
 });
+
+Route::get('/view/jadwalDokter', [jadwalDokterFController::class, 'index'])->name('jadwalDokter.index');
+Route::get('/layanan', [layananController::class, 'index'])->name('layanan.index');
+Route::get('/ranap', [ranapController::class, 'index'])->name('ranap.index');
+Route::get('/mcuF', [mcuFController::class, 'index'])->name('mcuF.index');
+Route::get('/paket', [paketController::class, 'index'])->name('paket.index');
+Route::get('/labF', [LabFController::class, 'index'])->name('LabF.index');
+Route::get('/eswlF', [eswlFController::class, 'index'])->name('eswlF.index');
+Route::get('/profilF', [profilFController::class, 'index'])->name('profilF.index');
+Route::get('/artikelkesehatanF', [artikelkesehatanFController::class, 'index'])->name('artikelkesehatanF.index');
+Route::get('/artikel1F', [artikel1FController::class, 'index'])->name('artikel1F.index');
+Route::get('/beritainformasiF', [beritainformasiFController::class, 'index'])->name('beritainformasiF.index');
+Route::get('/kegiatan', [kegiatanController::class, 'index'])->name('kegiatan.index');
+Route::get('/kegiatan1F', [kegiatan1FController::class, 'index'])->name('kegiatan1F.index');
+Route::get('/kegiatan2F', [kegiatan2FController::class, 'index'])->name('kegiatan2F.index');
+Route::get('/kegiatan3F', [kegiatan3FController::class, 'index'])->name('kegiatan3F.index');
+Route::get('/kegiatan4F', [kegiatan4FController::class, 'index'])->name('kegiatan4F.index');
+Route::get('/mitra', [mitraController::class, 'index'])->name('mitra.index');
+Route::get('/dokumenkepk', [dokumenkepkController::class, 'index'])->name('dokumenkepk.index');
+Route::get('/igd', [igdController::class, 'index'])->name('igd.index');
+Route::get('/artikel2F', [artikel2FController::class, 'index'])->name('artikel2F.index');
+Route::get('/artikel3F', [artikel3FController::class, 'index'])->name('artikel3F.index');
+
+
 
 Route::get('/dashboard', function () {
     return view('admin.index');

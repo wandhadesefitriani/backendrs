@@ -42,14 +42,35 @@
 						<div class="col-12">	
                        
 							<div class="form-group">
-								<h5>Judul <span class="text-danger">*</span></h5>
-									<input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul">
-                                    @error('judul')
+								<h5>Nama <span class="text-danger">*</span></h5>
+									<input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama">
+                                    @error('nama')
                                    <div class="invalid-feedback">
                                    {{$message}}
                                    </div>
                                    @enderror
                                     </div>
+
+									<div class="form-group">
+								<h5>Jam <span class="text-danger">*</span></h5>
+									<input type="text" class="form-control @error('jam') is-invalid @enderror" name="jam">
+                                    @error('jam')
+                                   <div class="invalid-feedback">
+                                   {{$message}}
+                                   </div>
+                                   @enderror
+                                    </div>
+
+									<div class="form-group">
+								<h5>Hari<span class="text-danger">*</span></h5>
+									<input type="text" class="form-control @error('hari') is-invalid @enderror" name="hari">
+                                    @error('hari')
+                                   <div class="invalid-feedback">
+                                   {{$message}}
+                                   </div>
+                                   @enderror
+                                    </div>
+                                    
                                     
 							
                            
@@ -65,12 +86,12 @@
                                     </div>	
 							
 
-
+<!-- 
                             <div class="form-group">
 								<h5>Deskripsi <span class="text-danger">*</span></h5>
                                 <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="3"></textarea>
 							</div>    
-							
+							 -->
                         <!-- END row select -->  
 						<div class="text-xs-right">
 							<button style="float:right;" type="submit" class="btn btn-rounded btn-success">Submit</button>
